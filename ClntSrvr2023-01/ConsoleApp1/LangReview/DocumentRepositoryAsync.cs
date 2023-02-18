@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1.LangReview
@@ -21,13 +19,29 @@ namespace ConsoleApp1.LangReview
             }
         }
 
-        public async Document Get(string Id)
+        public async Document Get(string id)
         {
-            return await Task.Run(() => _documents.Find(x => x.Id == Id));
+            return await Task.Run(() => _documents.Find(d => d.Id == id));
+        }
+
+        public async List<Document> GetAll(string title)
+        {
+            return await Task.Run(() => _documents.FindAll(d => d.Title == title));
         }
 
         public async void Add(Document document)
         {
+            await Task.Run(() => _documents.Add(document));
+        }
+
+        public async void Remove(Document document)
+        {
+            await Task.Run(() => _documents.Remove(document));
+        }
+
+        public async void Update(Document document)
+        {
+            await Task.Run(() => _documents.Remove(document));
             await Task.Run(() => _documents.Add(document));
         }
     }
