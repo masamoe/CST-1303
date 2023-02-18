@@ -19,14 +19,14 @@ namespace ConsoleApp1.LangReview
             }
         }
 
-        public async Document Get(string id)
+        public Document Get(string id)
         {
-            return await Task.Run(() => _documents.Find(d => d.Id == id));
+            return _documents.Find(d => d.Id == id);
         }
 
-        public async List<Document> GetAll(string title)
+        public List<Document> GetAll(string title)
         {
-            return await Task.Run(() => _documents.FindAll(d => d.Title == title));
+            return _documents.FindAll(d => d.Title == title);
         }
 
         public async void Add(Document document)
