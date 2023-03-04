@@ -1,0 +1,168 @@
+CSTP 1303 - March 4, 2023 Midterm Exam
+======================================
+
+Instructions:
+Exam is closed notes, books and internat.
+Put the questions and answers on a Text file.
+Name the file as 1303-midterm-[YourFullName]-[StudentNumber].Txt
+Push it to your GitHub repo and put the link on the Excel sheet provided.
+Also send a copy of the text file by email to: george.bekari@gmail.com
+=======================================================================
+
+1 - What is a constructor
+
+C) A special method named with the class name
+
+2 - How cohesive should your classes be and why?
+
+B) Maximize cohesion so class members relate to the class purpose.
+
+3 - How is an interface implemented in a class?
+
+B) Adding the interface name to the class signature.
+
+4 - Which syntax creates a new object from the Customer class?
+
+C) Customer currentCustomer = new Customer();
+
+5 - What is a static class?
+
+B) A class that cannot be instantiated.
+
+6 - What is an abstract class
+
+D) All of the above
+
+7 - How would you throw an exception ?
+
+B) throw new Exception();
+
+8 - You are required to develop a method which can be called by a varying number of parameters. The method is called:
+
+B) Method Overloading
+
+9 - Which keyword is used to check or compare one type to another?
+
+C) is
+
+10 - Suppose you are developing an application that uses the following C# code :
+
+01. public interface IPerson
+02. {
+03.     string Name { get; set; }
+04. }
+05.
+06. void PrintName(object obj)
+07. {
+08.     // what code should go here
+09.     if(person != null)
+10.     {
+11.         System.Console.WriteLine(person.Name);
+12.     }
+13. }
+
+Method PrintName() print the person object's name.
+Line 8 of the PrintName() method should be implemented such that the method
+does not throw any exceptions when converting the obj object to the IPerson interface.
+Which code segment should you insert at line 08?
+
+D) var person = obj as IPerson;
+
+11 - Which of the following methods is useful for holding the execution of a main thread until a background thread finishes executing?
+
+D) Task.Await()
+
+12 - When handling an exception, which block is used to release resources?
+
+C) finally
+
+13 - Which of the following collection types is used to retrieve data in a Last In First Out (LIFO) way.
+
+D) Stack
+
+Programming questions: 
+=====================
+14 - 
+Write an abstract class and reuse it
+Write an abstract class Vehicle with the following two methods 
+int GetNumberOfWheels() 
+int GetMaxSpeed()
+Create two classes Motorcycle and Car that inherit from Vehicle.
+print number of wheels and maximum speed for Motorcycle and Car.
+
+abstract class Vehicle
+{
+    public abstract int GetNumberOfWheels();
+    public abstract int GetMaxSpeed();
+}
+
+class Motorcycle : Vehicle
+{
+    public override int GetNumberOfWheels()
+    {
+        return 2;
+    }
+
+    public override int GetMaxSpeed()
+    {
+        return 150;
+    }
+}
+
+class Car : Vehicle
+{
+    public override int GetNumberOfWheels()
+    {
+        return 4;
+    }
+
+    public override int GetMaxSpeed()
+    {
+        return 200;
+    }
+}
+
+15 - 
+We’ve been given a list of some of the animals that will be in a program called zoo simulator, but not all of them. 
+We know that each animal will be represented by an object, and that the objects will move around in the simulator.
+Animals will be doing whatever it is that each particular animal is programmed to do.
+Your job is to design an app that simulates the zoo. 
+You are not going to actually build the code, just design the classes to represent the animals. 
+Show class design four examples of animals in C# code. 
+
+abstract class Animal
+{
+    public abstract void Move();
+}
+
+class Lion : Animal
+{
+    public override void Move()
+    {
+        Console.WriteLine("Lion is moving");
+    }
+}
+
+class Zebra : Animal
+{
+    public override void Move()
+    {
+        Console.WriteLine("Zebra is moving");
+    }
+}
+
+class Monkey : Animal
+{
+    public override void Move()
+    {
+        Console.WriteLine("Monkey is moving");
+    }
+}
+
+class Giraffe : Animal
+{
+    public override void Move()
+    {
+        Console.WriteLine("Giraffe is moving");
+    }
+}
