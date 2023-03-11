@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9rvMlm88hALKCujPMGLMvJ9XarNn8jV7cvrhXQK75P3kgeh8Q5tKuBHg1pFv5VeiNuP19TLnEAYXTMBOWESkdg==",
+  "dgSpecHash": "YpVyudlwU22OEoMdZLmixPKrWQlFk+4Pf8I7qFUMiyGZKTMsc4NAlnzPZr27FeSoO+wuTte5YzffO63irMEufg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
+  "projectFilePath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jake\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Jake\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

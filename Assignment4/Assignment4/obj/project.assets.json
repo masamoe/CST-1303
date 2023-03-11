@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
+      "projectUniqueName": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
       "projectName": "Assignment4",
-      "projectPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
+      "projectPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
       "packagesPath": "C:\\Users\\Jake\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\Assignment4\\Assignment4\\obj\\",
+      "outputPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
