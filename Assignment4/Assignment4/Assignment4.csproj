@@ -6,8 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DataModels\DataModels.csproj" />
+		<ProjectReference Include="..\Interfaces\Interfaces.csproj" />
+		<ProjectReference Include="..\Repositories\Repositories.csproj" />
+	</ItemGroup>
 
 </Project>

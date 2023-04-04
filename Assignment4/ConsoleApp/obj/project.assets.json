@@ -1,11 +1,68 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "DataModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DataModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataModels.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfaces.dll": {}
+        }
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DataModels/1.0.0": {
+      "type": "project",
+      "path": "../DataModels/DataModels.csproj",
+      "msbuildProject": "../DataModels/DataModels.csproj"
+    },
+    "Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Interfaces/Interfaces.csproj",
+      "msbuildProject": "../Interfaces/Interfaces.csproj"
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "DataModels >= 1.0.0",
+      "Repositories >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Jake\\.nuget\\packages\\": {},
@@ -39,7 +96,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\DataModels\\DataModels.csproj": {
+              "projectPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\DataModels\\DataModels.csproj"
+            },
+            "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Repositories\\Repositories.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
