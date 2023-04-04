@@ -299,7 +299,5 @@ namespace ConsoleApp
                 Console.WriteLine(gameScore.Date);
             }
         }
-
-        
     }
 }

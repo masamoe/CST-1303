@@ -1,12 +1,14 @@
 ﻿namespace ConsoleApp1
 {
-    using System;
-    using ConsoleApp1.Network;
     using ConsoleApp1.LangReview;
+    using ConsoleApp1.Network;
+    using DataModels;
+    using Repositories;
+    using System;
     using System.Collections.Generic;
     using System.Threading;
-    using mine = ConsoleApp1.LangReview;
     using System.Threading.Tasks;
+    using mine = ConsoleApp1.LangReview;
 
     public class Program
     {
@@ -15,11 +17,41 @@
         private static bool _done = false;
         static async Task Main(string[] args)
         {
-            // var taskAsyncIntro = new TaskAsyncIntro();
-            // await taskAsyncIntro.TestSimpleTaskFunc2();
+            var prg = new Program();
+            await prg.TestGetUriSum();
+            await prg.TestAsyncFuncsAndAwait();
 
+        }
+
+        private async Task TestGetUriSum()
+        {
+            var ex = new TaskAsyncIntro();
+            var uris = new string[]
+            {
+                "https://docservgbk20230224.azurewebsites.net/api/document?id=3",
+                "https://docservgbk20230224.azurewebsites.net/api/document?id=1"
+            };
+
+            var sum = await ex.GetTotalFileSize(uris);
+            Console.WriteLine($"Total size of given Uris: {sum}");
+        }
+
+        private async Task TestAsyncFuncsAndAwait()
+        {
+            var taskAsyncIntro = new TaskAsyncIntro();
+            await taskAsyncIntro.TestRunningTasksAndAwait();
+        }
+
+        private void TestStreamsIntro()
+        {
             var fio = new StreamsIntro();
             fio.FileInputOutput("test1.txt");
+        }
+
+        private async Task CallDocumentServiceThroughRepository()
+        {
+            var documentRepository = new DocumentRepository();
+            var doc = await documentRepository.GetFromService("https://localhost:44385/api/document", "d0987");
         }
 
         private void TestTaskThatThrowsException()

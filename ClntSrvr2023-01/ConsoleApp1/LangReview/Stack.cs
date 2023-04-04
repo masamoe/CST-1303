@@ -43,15 +43,5 @@ namespace ConsoleApp1.LangReview
 
             return default(T);
         }
-
-        public T Peek()
-        {
-            if (_position > 0)
-            {
-                return _data[_position - 1];
-            }
-
-            return default(T);
-        }
     }
 }
