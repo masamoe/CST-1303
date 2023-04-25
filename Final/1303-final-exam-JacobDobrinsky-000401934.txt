@@ -65,15 +65,15 @@ To Submit the exam:
     
 13 - In which portion of the OSI model will a user most likely notice an issue?
 
-    C) Layer 2 - The Data Layer
+    C) Layer 2 - The Data Layer ==> D [-3]
     
 14 - When using await to call an asynchronous function, where does the execution continue after returning from function?
 
-    A) On the same thread that it executed the asynchronous operation in
+    A) On the same thread that it executed the asynchronous operation in ==> B [-3]
     
 15 - Why should you always use async and await together in a method that leverages the asynchronous principles?
 
-    C) It makes the application easier to maintain.
+    C) It makes the application easier to maintain. ==> D [-3]
 
 16 - Why don't you explicltly have to return a Task from a method marked as async?
 
@@ -81,7 +81,7 @@ To Submit the exam:
        
 17 - What is the difference between an abstract and concrete class?
 
-    C) Abstract classes have no implementation.
+    C) Abstract classes have no implementation.  ==> A [-3]
     
 18 - Assuming that we have two async implementations of GetResult1 and GetResult2 called
     GetResult1Async() and GetResult2Async(), change the following code to take advantage of asynchronous execution. 
@@ -104,6 +104,7 @@ To Submit the exam:
 20 - Which of the following statements are true?
 
     C) A dictionary saves data in KeyValuePair, ensuring the uniqueness of key-value pairs present in the collection item.
+    ==> C & D [no points deducted]
     
 21 - You are working with a large group of student objects. You need to remove all duplicates and then group them by studentid. Which collections should we use?
 
@@ -216,7 +217,7 @@ abstract class Weapon
         }
         if (player.Level > 1)
         {
-            damage += player.Level * MagicDamageIncrease;
+            damage += player.Level * MagicDamageIncrease; // ==> this magic power only comes for the Sword, Staff and Dagger [-3]
         }
         return damage;
     }
@@ -272,7 +273,7 @@ class Game
     }
 }
 
-
+// ==> overall good job using inheritance to model the problem
 
 24 - Suppose we have a Player Score object for our game in Q24 that has the following properties.
     - Username (string)
