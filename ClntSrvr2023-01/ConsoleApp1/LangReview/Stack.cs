@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+// ==> 10/10
 namespace ConsoleApp1.LangReview
 {
     public class Stack<T>
