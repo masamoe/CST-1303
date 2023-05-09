@@ -72,9 +72,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
-      "projectName": "Assignment4",
-      "projectPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\Assignment4.csproj",
+      "projectUniqueName": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\GameService.csproj",
+      "projectName": "GameService",
+      "projectPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\GameService.csproj",
       "packagesPath": "C:\\Users\\Jake\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Jake\\Documents\\GitHub\\CST-1303\\CST-1303\\Assignment4\\Assignment4\\obj\\",
       "projectStyle": "PackageReference",

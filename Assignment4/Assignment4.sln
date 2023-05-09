@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment4", "Assignment4\Assignment4.csproj", "{22CF99BB-AE75-4314-BF56-1C280E181142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameService", "Assignment4\GameService.csproj", "{22CF99BB-AE75-4314-BF56-1C280E181142}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{E6788709-F083-4E6E-A815-3C91D9F7023B}"
 EndProject

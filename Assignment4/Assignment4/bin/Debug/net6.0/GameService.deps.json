@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GameService/1.0.0": {
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Interfaces": "1.0.0",
+          "Repositories": "1.0.0"
+        },
+        "runtime": {
+          "GameService.dll": {}
+        }
+      },
+      "DataModels/1.0.0": {
+        "runtime": {
+          "DataModels.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "dependencies": {
+          "DataModels": "1.0.0"
+        },
+        "runtime": {
+          "Interfaces.dll": {}
+        }
+      },
+      "Repositories/1.0.0": {
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Interfaces": "1.0.0"
+        },
+        "runtime": {
+          "Repositories.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
