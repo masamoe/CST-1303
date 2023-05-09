@@ -1,0 +1,355 @@
+
+CSTP 1303 - April 7, 2023 Final Exam
+======================================
+
+Instructions:
+Exam is closed notes, books and web.
+Put the questions and answers on a Text file.
+Name the file as 1303-midterm-[YourFullName]-[StudentNumber].Txt
+
+To Submit the exam:
+===================
+1 - Push the file to your GitHub repo and email the link to george.bekari@gmail.com.
+2 - Attach a copy of the text file to email to george.bekari@gmail.com
+====================================================================================
+
+1 - What does DNS stand for and what is the problem it solves?
+
+    Domain Name Server, redirects clients to an address on a network based on a provided hostname like google.com
+
+
+2 - Explain how the DNS resolver uses root DNS, TLD and SLD using an example?
+
+    When a user accesses a website like google.com, "google" would be the SLD(Second Level Domain) pointing to a specific IP, or "root DNS(Domain Name Server)", within the TLD(Top Level Domain) "com"
+
+3 - What is a thread in simple terms?
+
+    A single sequence of instructions
+
+4 - What is a process in simple terms?
+
+    Multiple threads, or instructions, in execution
+
+5 - Explain what a Client is in a Client/Server architecture?
+
+    A client is a device accessing data stored on a server
+
+6 - Explain what a Server is in a Client/Server architecture?
+
+    A server is a device which stores and supplies data to clients
+
+7 - Response codes 400-499 are reserved for what kinds of responses?
+
+    C) Client errors 
+
+8 - We are creating an API for customer management with fetch, create, update and list functionality.
+    What should the API do when a client POSTs to this endpoint [  http://www.codingsolutions/api/customer/  ]?
+
+    B) Create a new Customer
+
+9 - What should the API do when a client POSTs to the endpoint using an id parameter [  http://www.codingsolutions/api/customer/?id=123  ]?
+
+    C) Update a Customer
+    
+10 - For what is DNS responsible?
+
+    B) Converting hostnames to IP addresses
+    
+11 - For what is TCP responsible?
+
+    C) Reliable network transportation with guarantee of packet delivery order
+    
+12 - Where would you most likely encounter UDP?
+
+    B) Online games
+    
+13 - In which portion of the OSI model will a user most likely notice an issue?
+
+    C) Layer 2 - The Data Layer ==> D [-3]
+    
+14 - When using await to call an asynchronous function, where does the execution continue after returning from function?
+
+    A) On the same thread that it executed the asynchronous operation in ==> B [-3]
+    
+15 - Why should you always use async and await together in a method that leverages the asynchronous principles?
+
+    C) It makes the application easier to maintain. ==> D [-3]
+
+16 - Why don't you explicltly have to return a Task from a method marked as async?
+
+    A) Because it will automatically return a Task when you mark it as async. 
+       
+17 - What is the difference between an abstract and concrete class?
+
+    C) Abstract classes have no implementation.  ==> A [-3]
+    
+18 - Assuming that we have two async implementations of GetResult1 and GetResult2 called
+    GetResult1Async() and GetResult2Async(), change the following code to take advantage of asynchronous execution. 
+    
+    async int AddResults()
+    {
+        var result1 = await GetResult1Async();
+        var result2 = await GetResult2Async();
+        
+        return result1 + result2;
+    }
+    
+19 - Which of the following collection objects would fulfill the following requirements?
+    It must internally store a key and value pair for each item.
+    It must allow us to iterate over the collection in order of the key.
+    It allows us to access the objects using the key.
+
+    A) Dictionary
+    
+20 - Which of the following statements are true?
+
+    C) A dictionary saves data in KeyValuePair, ensuring the uniqueness of key-value pairs present in the collection item.
+    ==> C & D [no points deducted]
+    
+21 - You are working with a large group of student objects. You need to remove all duplicates and then group them by studentid. Which collections should we use?
+
+    C) Dictionary
+  
+    
+22 - Suppose you have the following code snippet:
+     class Person
+     {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+     }
+
+    class PersonRepository
+    {
+        Dictionary<int, Person> people = new Dictionary<int, Person>
+        {
+            {21, new Person {ID = 1, Name="Ali", Age = 22 } },
+            {22, new Person {ID = 2, Name="Sundus", Age = 21 } },
+            {23, new Person {ID = 3, Name="Asad", Age = 22 } },
+            {24, new Person {ID = 5, Name="Naveed", Age = 21 } },
+        };
+
+        private void AddAdminMember()
+        {
+X1:        
+X2:         people.Add(24, new Person { ID = 6, Name = "Malik", Age = 10 });
+
+        }
+    }
+
+    The application fails at line X2 with the following error message: "An item with the same key has already been added." You need to resolve the error.
+    Which code segment should you insert at line X1?
+    
+    B) if(!people.ContainsKey(24))
+    
+23 - You are develping an RPG game that incorporatres warriors, weapons and damages each weapon can cause. 
+    Your job is to create the classes for weapon damages. 
+    The weapons that can cause damage and the amount of damages are:
+      Weapon     Base Damage 
+      ======     ===========
+    - Sword       3
+    - Arrow       2
+    - Crossbow    2.5 
+    - Whip        1.5
+    - Dagger      2
+    - Staff       1
+    
+    All weapons calculate damage first by rolling dice. This is a virtual dice roll done randomly by the code.
+    A Dice roll of one has no effect on the damage.
+    There should be a CalculateDamage() method that returns the damage calculated as double.
+    Sword, Staff and Dagger are special weapons in that they can become magical weapons if the player has reached levels 2 and above.
+    Every player starts at level 1. From level 2 and up, the magic adds extra percentage to the weapon's damage.
+    
+    Player Level Damage increase % 
+    ============ ================
+    1               none
+    2               40%
+    3               60%
+    4               80%
+    5               100%
+
+    Dice Roll  Damage increase %
+    ========= ====================
+    1               none 
+    2               20%
+    3               30%
+    4               40%
+    5               50%
+    6               60%
+
+    E.g. the base damage for a sword is 3 and the user rolls 5 that increases the damage by 50% to 4.5
+    And if the player is at level 3, the damage is increased by 60% to 7.2
+        
+    Create the classes and methods necessary to calculate represent weapon damage and implement the CalculateDamage method for all weapons.
+
+    class Player
+{
+    public int Level { get; set; }
+
+    public Player(int level)
+    {
+        Level = level;
+    }
+}
+
+abstract class Weapon
+{
+    public double BaseDamage { get; set; }
+    public double DamageIncrease { get; set; }
+    public double MagicDamageIncrease { get; set; }
+    public double Damage { get; set; }
+
+    public Weapon(double baseDamage, double damageIncrease, double magicDamageIncrease)
+    {
+        BaseDamage = baseDamage;
+        DamageIncrease = damageIncrease;
+        MagicDamageIncrease = magicDamageIncrease;
+    }
+
+    public double CalculateDamage(Player player)
+    {
+        Random random = new Random();
+        int diceRoll = random.Next(1, 6);
+        double damage = BaseDamage;
+        if (diceRoll > 1)
+        {
+            damage += diceRoll * DamageIncrease;
+        }
+        if (player.Level > 1)
+        {
+            damage += player.Level * MagicDamageIncrease; // ==> this magic power only comes for the Sword, Staff and Dagger [-3]
+        }
+        return damage;
+    }
+}
+
+class Sword : Weapon
+{
+    public Sword() : base(3, 0.1, 0.2) { }
+}
+
+class Arrow : Weapon
+{
+    public Arrow() : base(2, 0.1, 0.2) { }
+}
+
+class Crossbow : Weapon
+{
+    public Crossbow() : base(2.5, 0.1, 0.2) { }
+}
+
+class Whip : Weapon
+{
+    public Whip() : base(1.5, 0.1, 0.2) { }
+}
+
+class Dagger : Weapon
+{
+    public Dagger() : base(2, 0.1, 0.2) { }
+}
+
+class Staff : Weapon
+{
+    public Staff() : base(1, 0.1, 0.2) { }
+}
+
+class Game
+{
+    static void Main(string[] args)
+    {
+        Player player = new Player(3);
+        Weapon[] weapons = new Weapon[] {
+            new Sword(),
+            new Arrow(),
+            new Crossbow(),
+            new Whip(),
+            new Dagger(),
+            new Staff()
+        };
+        foreach (Weapon weapon in weapons)
+        {
+            Console.WriteLine(weapon.CalculateDamage(player));
+        }
+    }
+}
+
+// ==> overall good job using inheritance to model the problem
+
+24 - Suppose we have a Player Score object for our game in Q24 that has the following properties.
+    - Username (string)
+    - GameId (string)
+    - Score (DateTime)
+    - Score (double)
+    
+    We need to periodically save the GameScore to a flat text file locally.
+    We also need to read the score from the latest file into memory when the user logs into the game.
+    Write the classes and methods to accomplish these functionalities.
+
+    // Assume you have the following utility interface, class and enum to access the file system.
+    public interface IFileManager
+    {
+        List<File> GetFolderContect(string path);
+        Open(string filename);
+        string ReadAll();
+        string Read(int length);
+        int Write(string);
+        Close();
+    }
+
+    public class File
+    {
+        public FileSystemObjectType FileSystemObjectType { get; }
+        public string Filename { get; }
+        public string Path { get; }
+    }
+    
+    public enum FileSystemObjectType
+    {
+        File,
+        Folder
+    }
+
+    class PlayerScore
+    {
+        public string Username { get; set; }
+        public string GameId { get; set; }
+        public DateTime Score { get; set; }
+        public double Score { get; set; }
+    }
+
+    class PlayerScoreFileManager
+    {
+        private IFileManager fileManager;
+
+        public PlayerScoreFileManager(IFileManager fileManager)
+        {
+            this.fileManager = fileManager;
+        }
+
+        public void Save(PlayerScore playerScore)
+        {
+            string filename = playerScore.Username + "_" + playerScore.GameId + ".txt";
+            fileManager.Open(filename);
+            fileManager.Write(playerScore.Username);
+            fileManager.Write(playerScore.GameId);
+            fileManager.Write(playerScore.Score.ToString());
+            fileManager.Write(playerScore.Score.ToString());
+            fileManager.Close();
+        }
+
+        public PlayerScore Load(string username, string gameId)
+        {
+            string filename = username + "_" + gameId + ".txt";
+            fileManager.Open(filename);
+            string username = fileManager.Read();
+            string gameId = fileManager.Read();
+            DateTime score = DateTime.Parse(fileManager.Read());
+            double score = double.Parse(fileManager.Read());
+            fileManager.Close();
+            return new PlayerScore(username, gameId, score, score);
+        }
+    }
+
+    ===========================================
+    Terms & abbreviations:
+    OSI: The Open Systems Interconnection model
